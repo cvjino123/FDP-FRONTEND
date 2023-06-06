@@ -2,9 +2,10 @@ import logo from './logo.svg';
 import './App.css';
 import View from './components/View';
 import Home from './components/Home';
-import Addemployee from './components/Addemployee';
+import Add from './components/Add';
 import Navbar from './components/Navbar';
 import { Route, Routes } from 'react-router-dom';
+import ViewEmployee from './components/ViewEmployee';
 
 function App() {
   return (
@@ -15,7 +16,9 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home></Home>}/>
-        <Route path='/add' element={<Addemployee></Addemployee>}/>
+        <Route path='/add' element={<Add data = { {sname:'',age:'',pos:'',sal:''}}method = 'post'/>}/>
+        <Route path='/view' element={<ViewEmployee></ViewEmployee>}/>
+
       </Routes>
     </div>
   );
